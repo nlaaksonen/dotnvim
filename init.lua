@@ -43,7 +43,11 @@ require('packer').startup(function()
   use 'MathSquared/vim-python-sql'
   use 'bronson/vim-trailing-whitespace'
   use 'lervag/vimtex'
-  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+  use {'iamcco/markdown-preview.nvim',
+    ft = {'markdown'},
+    run = 'cd app && yarn install',
+    cmd = 'MarkdownPreview'
+  }
 end)
 
 vim.cmd('filetype plugin indent on') -- not needed?
