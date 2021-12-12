@@ -10,7 +10,7 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   -- UI to select things (files, grep results, open buffers...)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'joshdick/onedark.vim' -- Theme inspired by Atom
   -- Add indentation guides even on blank lines
   use 'lukas-reineke/indent-blankline.nvim'
@@ -43,9 +43,10 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-tree.lua'
   use {'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons'}
+  -- COLORSCHEMES ----------------------
   use 'danilo-augusto/vim-afterglow'
   use 'AlessandroYorba/Alduin'
-  use 'morhetz/gruvbox'
+  use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
   use 'ulwlu/elly.vim'
   use {'catppuccin/nvim',
     as = 'catppuccin'
@@ -54,6 +55,7 @@ return require('packer').startup(function()
   use 'shaunsingh/nord.nvim'
   use 'shaunsingh/solarized.nvim'
   use 'shaunsingh/seoul256.nvim'
+  --------------------------------------
   use 'Vimjas/vim-python-pep8-indent'
   use 'MathSquared/vim-python-sql'
   use 'bronson/vim-trailing-whitespace'

@@ -25,6 +25,12 @@ vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>Trouble<cr>",
   {silent = true, noremap = true}
 )
 
+-- Telescope
+map('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<cr>", default_opts)
+map('n', '<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<cr>", default_opts)
+map('n', '<leader><space>', "<cmd>lua require('telescope.builtin').buffers()<cr>", default_opts)
+map('n', '<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>", default_opts)
+
 -- bufferline
 map('n', ']b', ':BufferLineCycleNext<CR>', default_opts)
 map('n', '[b', ':BufferLineCyclePrev<CR>', default_opts)
