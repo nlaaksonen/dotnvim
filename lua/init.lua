@@ -1,0 +1,18 @@
+-- Also install pyright, fzf, flake8
+require('settings')
+require('colors')
+require('keymaps')
+
+require('plugins/packer')
+require('plugins/gitsigns')
+require('plugins/indent-blankline')
+require('plugins/lsp_signature')
+require('plugins/lspconfig')
+require('plugins/lualine')
+require('plugins/luasnip')
+require('plugins/nvim-cmp')
+require('plugins/nvim-tree')
+require('plugins/telescope')
+require('plugins/treesitter')
+require('plugins/vimtex')
+require('plugins/bufferline')
