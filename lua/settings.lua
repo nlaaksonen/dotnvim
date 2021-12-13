@@ -1,6 +1,7 @@
 vim.cmd('filetype plugin indent on') -- not needed?
-vim.g.python_host_prog = '$HOME/.pyenv/versions/neovim2/bin/python'
+vim.g.loaded_python_provider = 0
 vim.g.python3_host_prog = '$HOME/.pyenv/versions/neovim3/bin/python'
+vim.opt.pyxversion = 3
 
 -----------------------------------------------------------
 -- General
