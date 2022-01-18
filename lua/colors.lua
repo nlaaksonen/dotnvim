@@ -22,3 +22,5 @@ vim.g.alduin_Shout_Fire_Breath = 1
 -- require('solarized').set()
 
 -- require('seoul256')
+
+vim.cmd('colorscheme kanagawa')

@@ -33,16 +33,16 @@ return require('packer').startup(function()
   -- External sources for LSP: e.g. flake8
   use({ "jose-elias-alvarez/null-ls.nvim",
     config = function()
-      require("null-ls").config({})
-      require("lspconfig")["null-ls"].setup({})
+      require("null-ls").setup({})
     end,
-    requires = {"nvim-lua/plenary.nvim", "neovim/nvim-lspconfig"}
+    requires = {"nvim-lua/plenary.nvim"}
   })
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
   use {'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons'}
+
   -- COLORSCHEMES ----------------------
   use 'danilo-augusto/vim-afterglow'
   use 'AlessandroYorba/Alduin'
@@ -55,7 +55,9 @@ return require('packer').startup(function()
   use 'shaunsingh/nord.nvim'
   use 'shaunsingh/solarized.nvim'
   use 'shaunsingh/seoul256.nvim'
+  use "rebelot/kanagawa.nvim"
   --------------------------------------
+
   use 'Vimjas/vim-python-pep8-indent'
   use 'MathSquared/vim-python-sql'
   use 'bronson/vim-trailing-whitespace'

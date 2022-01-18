@@ -30,15 +30,17 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Setup external sources for LSP
 local null_ls = require("null-ls")
-require("null-ls").config({
+require("null-ls").setup({
     sources = {
     null_ls.builtins.diagnostics.flake8,
     null_ls.builtins.formatting.prettier
-  }
+  },
+  on_attach = on_attach,
+  capabilities = capabilities
 })
 
 -- Enable the following language servers
-local servers = { 'pyright', 'null-ls', 'html' }
+local servers = { 'pyright', 'html' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
